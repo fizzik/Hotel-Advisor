@@ -1,0 +1,11 @@
+<h1><%= @hotel.title %></h1>
+
+<%= @hotel.room_description %>
+<%= @hotel.breackfast %>
+<%= @hotel.price %>
+
+<p>
+  <%= link_to "Edit", edit_hotel_path(@hotel) %> |
+  <%= link_to "Back to Hotels", hotels_path %>
+  <%= link_to "delete", @hotel, method: :delete, data: { confirm: "You sure?" }  %>
+</p>
