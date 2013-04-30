@@ -23,5 +23,6 @@ group :assets do
   gem 'carrierwave'
 end
 
+gem 'carrierwave'
 gem 'devise'
 gem 'jquery-rails'
