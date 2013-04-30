@@ -1,11 +1,23 @@
-<h1><%= @hotel.title %></h1>
+    </div>
+         <hr>
+     <ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag @hotel.image_url.to_s %>
+      <h3><%= @hotel.title%></h3>
+      <p><%= @hotel.room_description %></p>
+      Price:<div class='price'><%= @hotel.price  %></div>
 
-<%= @hotel.room_description %>
-<%= @hotel.breackfast %>
-<%= @hotel.price %>
+           Hotel address:<br/>
+    <strong><%= @hotel.location.country %></strong><br>
+    <%= @hotel.location.city %><br>
+    <%= @hotel.location.state %><br>
+    <abbr title="Street"><%= @hotel.location.street %></abbr>
+  </address>
+    </div>
+  </li>
+</ul>
 
-<p>
-  <%= link_to "Edit", edit_hotel_path(@hotel) %> |
-  <%= link_to "Back to Hotels", hotels_path %>
-  <%= link_to "delete", @hotel, method: :delete, data: { confirm: "You sure?" }  %>
-</p>
+<%= link_to 'Back', hotels_path, :class=> 'btn btn-inverse' %>
+<%= link_to 'Edit', edit_hotel_path, :class=> 'btn btn-inverse' %>
+<%= link_to "delete", @hotel, method: :delete, data: { confirm: "You sure?" }, :class=> 'btn btn-inverse'  %>
