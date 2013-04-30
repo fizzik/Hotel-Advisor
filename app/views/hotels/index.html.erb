@@ -1,16 +1,18 @@
 <h1>Hotels</h1>
 
-
-
-
-
-<div id="hotel">
 <% @hotel.each do |h| %>
-  <h2><%= link_to h.title, h %></h2>
-  <%= h.title %>
-  <%= h.room_description %>
-  <%= h.price %>
-<% end %>
-</div>
+     <div id="background">
+    <div class="title">
+      <%= link_to h.title, h %><br />
+      <%= image_tag h.image_url.to_s %>
 
-<p><%= link_to "New Hotel", new_hotel_path %></p>
+     </div>
+
+    Price: <div class='price'><%= h.price  %></div>
+
+    </div>
+         <hr>
+<% end %>
+
+
+<p><%= link_to "New Hotel", new_hotel_path, :class=> 'btn btn-inverse' %></p>
