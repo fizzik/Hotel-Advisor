@@ -5,4 +5,9 @@ HotelAdvisor::Application.routes.draw do
 
   resources :hotels
   root :to => 'hotels#index', :as => 'index'
+
+  resources :comments
+  root :to => 'page#index',  :as => 'page'
+
+
 end
