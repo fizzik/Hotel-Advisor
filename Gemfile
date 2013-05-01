@@ -21,7 +21,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'twitter-bootstrap-rails'
   gem 'carrierwave'
-  gem "haml", "~> 4.0.2"
 end
 
 gem 'carrierwave'
