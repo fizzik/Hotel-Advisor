@@ -4,7 +4,7 @@ class RatingsController < ApplicationController
     def create
             @hotel = Hotel.find_by_id(params[:hotel_id])
             if current_user.id == @hotel.id
-                redirect_to hotel_path(@hotel), :alert => "You cannot rate for your own photo"
+                redirect_to hotel_path(@hotel), :alert => "You cannot rate for your own hotel"
             else
                 @rating = Rating.new(params[:rating])
                 @rating.hotel_id = @hotel.id
@@ -20,7 +20,7 @@ class RatingsController < ApplicationController
     def update
                 @hotel = Hotel.find_by_id(params[:hotel_id])
                 if current_user.id == @hotel.id
-                    redirect_to hotel_path(@hotel), :alert => "You cannot rate for your own photo"
+                    redirect_to hotel_path(@hotel), :alert => "You cannot rate for your own hotel"
                 else
                     @rating = current_user.ratings.find_by_hotel_id(@hotel.id)
                     if @rating.update_attributes(params[:rating])
