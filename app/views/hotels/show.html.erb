@@ -18,7 +18,7 @@
       <%= form_for rating_ballot, :html => {:class =>'rating_ballot'} do |f| %>
                <% (1..5).each do |i| %>
 
-              <%= f.label("value_"+i.to_s , content_tag(:span, i.to_s), :class => "rating", :id=>i.to_s) %>
+              <%= f.label("value_"+i.to_s, content_tag(:span, i.to_s), :class => "rating", :id=>i.to_s) %>
               <%= radio_button_tag "rating[value]", i, current_user_rating == i, :class => 'rating_button' %>
 
 

@@ -3,7 +3,7 @@ class HotelsController < ApplicationController
 
 
   def index
-    @hotel = Hotel.all
+     @hotels = Hotel.all.sort_by{|h| -h.average_rating}
   end
 
   def show
