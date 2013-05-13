@@ -5,6 +5,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'rspec-rails', '2.11.0'
 gem 'mysql2'
 
+
 group :development, :test do
   gem 'capybara', '1.1.2'
 end

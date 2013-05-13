@@ -19,7 +19,8 @@ class Hotel < ActiveRecord::Base
         @value = @value + rating.value
     end
     @total = self.ratings.size
-    @value.to_f / @total.to_f
+    (@value.to_f / @total.to_f).round(1)
+
 end
 
 

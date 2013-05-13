@@ -7,5 +7,5 @@ class CreateRatings < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
+ end
 end

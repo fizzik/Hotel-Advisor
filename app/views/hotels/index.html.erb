@@ -1,6 +1,6 @@
 <h1>Hotels</h1>
 
-<% @hotel.each do |h| %>
+<% @hotels.each do |h| %>
      <div id="background">
     <div class="title">
       <%= link_to h.title, h %><br />
@@ -9,7 +9,7 @@
      </div>
 
     Price: <div class='price'><%= h.price  %></div>
-
+    Rating:  <%= h.average_rating %>
     </div>
          <hr>
 <% end %>
